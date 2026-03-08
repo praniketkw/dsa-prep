@@ -5,7 +5,6 @@
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        # first pass to get the len count
         dummy = ListNode(0, head)
         l,r = dummy, head
 
@@ -18,5 +17,4 @@ class Solution:
             r = r.next
         
         l.next = l.next.next
-
         return dummy.next
